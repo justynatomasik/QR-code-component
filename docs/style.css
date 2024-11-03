@@ -1,41 +1,108 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Balance text wrapping on headings */
+h1,
+h2,
+h3,
+h4 {
+  text-wrap: balance;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
 body {
   display: flex;
-  height: 100vh;
+  min-height: 100svh;
   justify-content: center;
   align-items: center;
   background-color: hsl(212, 45%, 89%);
+  padding: 20px;
+  text-align: center;
+  font-family: "Outfit", sans-serif;
 }
 img {
-  display: block;
-  margin: 15px;
+  height: auto;
+  margin-bottom: 16px;
   border-radius: 8px;
-  width: 240px;
 }
 .wrapper {
-  width: 270px;
-  height: 430px;
+  max-width: 20rem;
   background-color: white;
   border-radius: 17px;
+  padding: 16px;
+  box-shadow: 0 0 5px #ccc;
 }
-h1 {
-  font-family: "Outfit", sans-serif;
-  font-optical-sizing: auto;
+h2 {
   font-weight: 700;
-  font-style: normal;
-  font-size: 20px;
+  font-size: 1.5rem;
   color: hsl(218, 44%, 22%);
-  text-align: center;
-  margin-left: 20px;
-  margin-right: 20px;
 }
 p {
-  font-family: "Outfit", sans-serif;
-  font-optical-sizing: auto;
-  font-weight: 400;
-  font-style: normal;
-  font-size: 15px;
+  font-size: 1rem;
   color: hsl(216, 15%, 48%);
-  text-align: center;
-  margin-left: 15px;
-  margin-right: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
 }
